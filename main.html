@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarot Card Game</title>
+<link rel="stylesheet" href="main.css">
+<script src="main.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #cardImage {
+        width: 200px;
+        height: auto;
+        margin: 20px auto;
+    }
+    
+</style>
+<img src="OTHER IMAGES/HOUSE IMG.jpeg" alt="house of tarot card image" height="100px" width="100px">
+</body>
+</head>
+
+<body>
+<h1>HOUSE OF TAROT</h1>
+<div>
+    <label for="cardChoice">Choose a card:</label>
+    <select id="cardChoice">
+        <option value="">Select a card</option>
+        <option value="The Fool">The Fool</option>
+        <option value="The Magician">The Magician</option>
+        <option value="The High Priestess">The High Priestess</option>
+        <option value="The Empress">The Empress</option>
+        <option value="The Emperor">The Emperor</option>
+        <option value="The Hierophant">The Hierophant</option>
+        <option value="The Lovers">The Lovers</option>
+        <option value="The Chariot">The Chariot</option>
+        <option value="Strength">Strength</option>
+        <option value="The Hermit">The Hermit</option>
+        <option value="Wheel of Fortune">Wheel of Fortune</option>
+        <option value="Justice">Justice</option>
+        <option value="The Hanged Man">The Hanged Man</option>
+        <option value="Death">Death</option>
+        <option value="Temperance">Temperance</option>
+        <option value="The Devil">The Devil</option>
+        <option value="The Tower">The Tower</option>
+        <option value="The Star">The Star</option>
+        <option value="The Moon">The Moon</option>
+        <option value="The Sun">The Sun</option>
+        <option value="Judgement">Judgement</option>
+        <option value="The World">The World</option>
+    </select>
+    <button onclick="drawCard()">Draw a Card</button>
+</div>
+
+<div id="response"></div>
+<div id="cardImage"></div> <!-- Add this div for displaying card image -->
+
+
+
+<script>
+// Define tarot card deck
+const tarotDeck = [
+    "The Fool",
+    "The Magician",
+    "The High Priestess",
+    "The Empress",
+    "The Emperor",
+    "The Hierophant",
+    "The Lovers",
+    "The Chariot",
+    "Strength",
+    "The Hermit",
+    "Wheel of Fortune",
+    "Justice",
+    "The Hanged Man",
+    "Death",
+    "Temperance",
+    "The Devil",
+    "The Tower",
+    "The Star",
+    "The Moon",
+    "The Sun",
+    "Judgement",
+    "The World"
+];
+
+// Define spiritual responses for each card
+const spiritualResponses = {
+    "The Fool": "Embrace new beginnings and trust in the journey ahead.",
+    "The Magician": "Harness your inner potential and manifest your desires.",
+    "The High Priestess": "Listen to your intuition and trust your inner wisdom.",
+    "The Empress": "Embrace abundance and nurture your creativity.",
+    "The Emperor": "Take control of your life and establish structure.",
+    "The Hierophant": "Seek guidance from tradition and spiritual leaders.",
+    "The Lovers": "Embrace harmony and make choices from the heart.",
+    "The Chariot": "Stay focused and determined to overcome obstacles.",
+    "Strength": "Tap into your inner strength and courage.",
+    "The Hermit": "Seek solitude and inner reflection for guidance.",
+    "Wheel of Fortune": "Embrace change and go with the flow of life.",
+    "Justice": "Seek balance and fairness in your decisions.",
+    "The Hanged Man": "Surrender to the present moment and gain new perspectives.",
+    "Death": "Embrace transformation and new beginnings.",
+    "Temperance": "Find balance and moderation in all aspects of life.",
+    "The Devil": "Release yourself from bondage and embrace freedom.",
+    "The Tower": "Embrace sudden change as an opportunity for growth.",
+    "The Star": "Have faith and follow your dreams.",
+    "The Moon": "Trust your intuition and navigate through uncertainty.",
+    "The Sun": "Embrace joy, vitality, and success.",
+    "Judgement": "Reflect on past actions and embrace spiritual awakening.",
+    "The World": "Celebrate completion and fulfillment of goals."
+};
+
+// Function to draw a random card
+function drawCard() {
+    const cardSelect = document.getElementById("cardChoice");
+    const card = cardSelect.value;
+    if (card) {
+        displayCard(card);
+        displayResponse(card);
+    } else {
+        alert("Please select a card.");
+    }
+}
+
+// Function to display the selected card image
+function displayCard(card) {
+    const cardImage = document.getElementById("cardImage");
+    cardImage.innerHTML = `<img src="images/${card}.jpeg" alt="${card}">`;
+}
+
+// Function to display the spiritual response for the selected card
+function displayResponse(card) {
+    const responseDiv = document.getElementById("response");
+    responseDiv.textContent = spiritualResponses[card];
+}
+</script>
+
+</body>
+</html>

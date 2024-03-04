@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Website</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>HOUSE OF TAROT</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#readings">Readings</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<img src="OTHER IMAGES/HOUSE IMG.jpeg" alt="house of tarot card image" height="100px" width="100px">
+<section id="hero">
+    <h2>HOUSE OF TAROT</h2>
+    <p>Discover the power of tarot readings and gain insights into your life's journey.</p>
+    <a href="#readings" class="cta-button">Get a Reading</a>
+</section>
+<h1>Learn Tarot</h1>
+<p>Go back to the <a href="main.html">Training</a>.</p>
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <span><h3>Welcome to our Tarot website, a mystical gateway to understanding the hidden aspects of life. We are a dedicated team of Tarot enthusiasts, committed to bringing the ancient wisdom of Tarot to the modern world.
+        </h3></span>
+        <a href="#readings" class="cta-button">Explore Readings</a>
+    </div>
+</section>
+<section id="readings">
+    <div class="container">
+        <h2>Tarot Readings</h2>
+        <p>Our journey began with a shared fascination for the symbolic language of Tarot.<br>
+            <br>  We believe that Tarot is more than just a deck of cards; it's a mirror to our soul, a guide to our thoughts, and a compass for our life's journey.</p>
+        <div class="readings-grid">
+            <!-- Display different types of tarot readings here -->
+        </div>
+    </div>
+</section>
+<section id="explore-topics">
+    <div class="category">
+        <a href="#" onclick="showPrompt('Love')"> <!-- Add onclick event -->
+            <img src="OTHER IMAGES/Love.jpg" alt="Love">
+            <h2>Love</h2>
+        </a>
+    </div>
+    <div class="category">
+        <a href="#" onclick="showPrompt('Sigil Magic')"> <!-- Add onclick event -->
+            <img src="OTHER IMAGES/sigil_magic.jpeg" alt="Sigil Magic">
+            <h2>Sigil Magic</h2>
+        </a>
+    </div>
+    <div class="category">
+        <a href="#" onclick="showPrompt('Tarot')"> <!-- Add onclick event -->
+            <img src="OTHER IMAGES/HOUSE IMG.jpeg" alt="Tarot">
+            <h2>Tarot</h2>
+        </a>
+    </div>
+    <div class="category">
+        <a href="#" onclick="showPrompt('Career')"> <!-- Add onclick event -->
+            <img src="OTHER IMAGES/CAREER.jpeg" alt="Career">
+            <h2>Career</h2>
+        </a>
+    </div>
+    <div class="category">
+        <a href="#" onclick="showPrompt('Legal')"> <!-- Add onclick event -->
+            <img src="OTHER IMAGES/LAW.jpeg" alt="Legal">
+            <h2>Legal</h2>
+        </a>
+    </div>
+</section>
+<section id="blog">
+    <div class="container">
+        <h2>Blog</h2>
+        <p>Discover articles and insights about tarot, spirituality, and personal growth.</p>
+        <div class="blog-posts">
+            <a href="https://www.learnreligions.com/chaos-magic-95940">CHAOS</a><!-- Display blog posts here -->
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="footer-logo">
+            <h1>Tarot Insights</h1>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#readings">Readings</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // JavaScript function to display prompt message
+    function showPrompt(category) {
+        alert("Explore the " + category + " category! Book Your Reading Now"); // Modify the prompt message as needed
+    }
+</script>
+
+</body>
+</html>
