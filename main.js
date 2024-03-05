@@ -117,4 +117,3 @@ function showResponse() {
             alert("Invalid card choice.");
         }
     }
-
