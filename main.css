@@ -187,3 +187,8 @@ header {
     max-width: 100%;
     height: auto;
 }
+span {
+    display: flex;
+    
+    
+}
